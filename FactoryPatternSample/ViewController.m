@@ -7,7 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "DeviceFactory.h"
 
+
+/**
+ *  简单工厂模式的运用
+ *  参考自YouXianMing对设计模式的理解
+ */
 @interface ViewController ()
 
 @end
@@ -16,12 +22,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    BaseDevice *iphone = [DeviceFactory createDeviceWithType:kiPhone];
+    
+    BaseDevice *android = [DeviceFactory createDeviceWithType:kAndroid];
+    
+    [iphone phoneCall];
+    [iphone sendMessage];
+    
+    [android phoneCall];
+    [android sendMessage];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

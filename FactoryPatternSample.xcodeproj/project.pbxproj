@@ -13,6 +13,10 @@
 		12D937551BCA4134004A581C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D937531BCA4134004A581C /* Main.storyboard */; };
 		12D937571BCA4134004A581C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D937561BCA4134004A581C /* Assets.xcassets */; };
 		12D9375A1BCA4134004A581C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D937581BCA4134004A581C /* LaunchScreen.storyboard */; };
+		12D937641BCA41A4004A581C /* BaseDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937631BCA41A4004A581C /* BaseDevice.m */; settings = {ASSET_TAGS = (); }; };
+		12D937681BCA4272004A581C /* iPhoneDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937671BCA4272004A581C /* iPhoneDevice.m */; settings = {ASSET_TAGS = (); }; };
+		12D9376B1BCA42AE004A581C /* AndroidDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D9376A1BCA42AE004A581C /* AndroidDevice.m */; settings = {ASSET_TAGS = (); }; };
+		12D9376E1BCA42DB004A581C /* DeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D9376D1BCA42DB004A581C /* DeviceFactory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,15 @@
 		12D937561BCA4134004A581C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12D937591BCA4134004A581C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12D9375B1BCA4134004A581C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D937621BCA41A4004A581C /* BaseDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDevice.h; sourceTree = "<group>"; };
+		12D937631BCA41A4004A581C /* BaseDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDevice.m; sourceTree = "<group>"; };
+		12D937651BCA41B5004A581C /* DeviceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceProtocol.h; sourceTree = "<group>"; };
+		12D937661BCA4272004A581C /* iPhoneDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneDevice.h; sourceTree = "<group>"; };
+		12D937671BCA4272004A581C /* iPhoneDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneDevice.m; sourceTree = "<group>"; };
+		12D937691BCA42AE004A581C /* AndroidDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidDevice.h; sourceTree = "<group>"; };
+		12D9376A1BCA42AE004A581C /* AndroidDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidDevice.m; sourceTree = "<group>"; };
+		12D9376C1BCA42DB004A581C /* DeviceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceFactory.h; sourceTree = "<group>"; };
+		12D9376D1BCA42DB004A581C /* DeviceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +75,7 @@
 				12D9374E1BCA4134004A581C /* AppDelegate.m */,
 				12D937501BCA4134004A581C /* ViewController.h */,
 				12D937511BCA4134004A581C /* ViewController.m */,
+				12D937611BCA418B004A581C /* Device */,
 				12D937531BCA4134004A581C /* Main.storyboard */,
 				12D937561BCA4134004A581C /* Assets.xcassets */,
 				12D937581BCA4134004A581C /* LaunchScreen.storyboard */,
@@ -77,6 +91,22 @@
 				12D9374B1BCA4134004A581C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12D937611BCA418B004A581C /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				12D9376C1BCA42DB004A581C /* DeviceFactory.h */,
+				12D9376D1BCA42DB004A581C /* DeviceFactory.m */,
+				12D937651BCA41B5004A581C /* DeviceProtocol.h */,
+				12D937621BCA41A4004A581C /* BaseDevice.h */,
+				12D937631BCA41A4004A581C /* BaseDevice.m */,
+				12D937661BCA4272004A581C /* iPhoneDevice.h */,
+				12D937671BCA4272004A581C /* iPhoneDevice.m */,
+				12D937691BCA42AE004A581C /* AndroidDevice.h */,
+				12D9376A1BCA42AE004A581C /* AndroidDevice.m */,
+			);
+			name = Device;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +181,11 @@
 			files = (
 				12D937521BCA4134004A581C /* ViewController.m in Sources */,
 				12D9374F1BCA4134004A581C /* AppDelegate.m in Sources */,
+				12D937681BCA4272004A581C /* iPhoneDevice.m in Sources */,
+				12D9376B1BCA42AE004A581C /* AndroidDevice.m in Sources */,
+				12D937641BCA41A4004A581C /* BaseDevice.m in Sources */,
 				12D9374C1BCA4134004A581C /* main.m in Sources */,
+				12D9376E1BCA42DB004A581C /* DeviceFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
